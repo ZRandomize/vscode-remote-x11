@@ -94,6 +94,12 @@
             "default": "",
             "scope": "machine"
           },
+          "remoteX11.SSH.user": {
+            "type": "string",
+            "markdownDescription": "Sets the username or IP address to connect to instead of reading from `SSH_CONNECTION`.",
+            "default": "",
+            "scope": "machine"
+          },
           "remoteX11.SSH.port": {
             "type": [
               "number",
