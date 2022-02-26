@@ -41,6 +41,10 @@ export function getServerHost(): string | null {
     return getConfig<string | null>('SSH.host', null);
 }
 
+export function getServerUserName(): string | null {
+    return getConfig<string | null>('SSH.user', null);
+}
+
 export function getServerPort(): number | null {
     return getConfig<number | null>('SSH.port', null);
 }
