@@ -15,6 +15,7 @@ import {
     getScreen,
     getServerHost,
     getServerPort,
+    getServerUser,
     getTimeout,
     getX11ConnectionMethod,
     getX11SocketPath,
@@ -57,7 +58,7 @@ export function deactivate(): void {
 
 function createForwardedDisplay(conn: Client, options: ConnectOptions): Promise<string> {
     return new Promise((resolve, reject) => {
-        const { username } = options;
+        const username = getServerUser() || options.username;
         const host = getServerHost() || options.host;
         const port = getServerPort() || options.port;
 
